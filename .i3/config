@@ -159,4 +159,4 @@ bar {
 exec gnome-settings-daemon
 exec synapse
 exec dropbox start
-exec uxrvt
+exec nm-applet
