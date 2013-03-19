@@ -9,6 +9,12 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# class                 border  backgr. text    indicator
+client.focused          #333333 #333333 #DD4814 #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
