@@ -33,7 +33,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 
 # change focus
 bindsym $mod+j focus left
@@ -168,11 +168,9 @@ exec synapse
 exec dropbox start
 exec nm-applet
 
-
-
-set $font -misc-fixed-medium-r-normal-*-20-140-75-75-c-90-iso10646-1
 set $font Ubuntu-10
+set $selbgcolor #DD4814
 set $dmc $(</tmp/dmenu.conf)
-exec --no-startup-id echo '-b -fn $font' > /tmp/dmenu.conf
-bindsym $mod+x exec /usr/local/bin/dmenu_run $dmc
-bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu -i $dmc"
+exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
+bindsym $mod+d exec /usr/local/bin/dmenu_run $dmc
+bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
