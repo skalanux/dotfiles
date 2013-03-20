@@ -286,3 +286,4 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 " patched font (more info on the README.rst)
 let g:Powerline_symbols = 'fancy'
 set colorcolumn=79
+set mouse=a
