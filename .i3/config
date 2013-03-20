@@ -161,6 +161,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         mode hide
+        colors{
+        background #222222
+        focused_workspace  #ffffff #DD4814
+        }
 }
 
 exec gnome-settings-daemon
