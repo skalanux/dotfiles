@@ -27,7 +27,7 @@ font xft:Ubuntu 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -86,10 +86,10 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace 1: browser
+bindsym $mod+2 workspace 2: devel
+bindsym $mod+3 workspace 3: toggle
+bindsym $mod+4 workspace 4: servers
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -166,6 +166,9 @@ bar {
         focused_workspace  #ffffff #DD4814
         }
 }
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 
 exec gnome-settings-daemon
 exec synapse
@@ -178,3 +181,9 @@ set $dmc $(</tmp/dmenu.conf)
 exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
 bindsym $mod+d exec /usr/local/bin/dmenu_run $dmc
 bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
+
+exec --no-startup-id xsetroot -solid "#111111"
+
+for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
+exec --no-startup-id urxvt -name urxvt_scratchpad -e ipython
+
