@@ -166,9 +166,6 @@ bar {
         focused_workspace  #ffffff #DD4814
         }
 }
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-
 
 exec gnome-settings-daemon
 exec synapse
@@ -180,10 +177,19 @@ set $selbgcolor #DD4814
 set $dmc $(</tmp/dmenu.conf)
 exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
 bindsym $mod+d exec /usr/local/bin/dmenu_run $dmc
-bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
+#bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
 
 exec --no-startup-id xsetroot -solid "#111111"
 
-for_window [instance="urxvt_scratchpad"] move to scratchpad, border 1pixel
-exec --no-startup-id urxvt -name urxvt_scratchpad -e ipython
+for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
+for_window [instance="urxvt_mc"] move to scratchpad, border 1pixel
 
+exec --no-startup-id urxvt -name urxvt_python -e ipython
+
+exec --no-startup-id urxvt -name urxvt_mc -e mc ~/Descargas/ ~/Dropbox/
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+bindsym $mod+m [instance="urxvt_mc"] scratchpad show
+bindsym $mod+i [instance="urxvt_python"] scratchpad show
