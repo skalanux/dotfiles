@@ -168,7 +168,8 @@ bar {
 }
 
 exec gnome-settings-daemon
-exec synapse
+# Start synapse in startup mode
+exec synapse -s
 exec dropbox start
 exec nm-applet
 
