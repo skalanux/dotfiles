@@ -160,7 +160,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        mode hide
+        #mode hide
         colors{
         background #222222
         focused_workspace  #ffffff #DD4814
@@ -183,14 +183,14 @@ bindsym $mod+d exec /usr/local/bin/dmenu_run $dmc
 exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
-for_window [instance="urxvt_mc"] move to scratchpad, border 1pixel
+for_window [instance="zim"] move to workspace 4
 
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 
-exec --no-startup-id urxvt -name urxvt_mc -e mc ~/Descargas/ ~/Dropbox/
+exec --no-startup-id zim
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+m [instance="urxvt_mc"] scratchpad show
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
+bindsym $mod+m workspace 4
