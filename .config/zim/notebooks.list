@@ -1,9 +1,16 @@
 [NotebookList]
 Default=
 ~/Dropbox/Knowledge/zim/chino
+~/Dropbox/Knowledge/zim/devecoop
 
 [Notebook]
 uri=~/Dropbox/Knowledge/zim/chino
 name=chino
+interwiki=None
+icon=None
+
+[Notebook]
+uri=~/Dropbox/Knowledge/zim/devecoop
+name=devecoop
 interwiki=None
 icon=None

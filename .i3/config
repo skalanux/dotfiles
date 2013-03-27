@@ -177,7 +177,7 @@ set $font Ubuntu-10
 set $selbgcolor #DD4814
 set $dmc $(</tmp/dmenu.conf)
 exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
-bindsym $mod+d exec /usr/local/bin/dmenu_run $dmc
+bindsym $mod+d exec dmenu_run $dmc
 #bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
 
 exec --no-startup-id xsetroot -solid "#111111"

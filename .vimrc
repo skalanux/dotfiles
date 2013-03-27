@@ -25,7 +25,7 @@ Bundle 'gmarik/vundle'
 " Bundles from GitHub repos:
 
 " Python and PHP Debugger
-Bundle 'fisadev/vim-debug.vim'
+"Bundle 'fisadev/vim-debug.vim'
 " Better file browser
 Bundle 'scrooloose/nerdtree'
 " Code commenter
@@ -185,14 +185,14 @@ let OmniCpp_MayCompleteScope = 0
 let OmniCpp_SelectFirstItem = 0
 
 " debugger keyboard shortcuts
-map <F5> :Dbg over<CR>
-map <F6> :Dbg into<CR>
-map <F7> :Dbg out<CR>
-map <F8> :Dbg here<CR>
-map <F9> :Dbg break<CR>
-map <F10> :Dbg watch<CR>
-map <F11> :Dbg down<CR>
-map <F12> :Dbg up<CR>
+"map <F5> :Dbg over<CR>
+"map <F6> :Dbg into<CR>
+"map <F7> :Dbg out<CR>
+"map <F8> :Dbg here<CR>
+"map <F9> :Dbg break<CR>
+"map <F10> :Dbg watch<CR>
+"map <F11> :Dbg down<CR>
+"map <F12> :Dbg up<CR>
 
 " CtrlP (new fuzzy finder)
 let g:ctrlp_map = ',e'
@@ -287,3 +287,10 @@ let g:AutoClosePumvisible = {"ENTER": "\<C-Y>", "ESC": "\<ESC>"}
 let g:Powerline_symbols = 'fancy'
 set colorcolumn=79
 set mouse=a
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()

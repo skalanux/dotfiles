@@ -1,13 +1,19 @@
 [global_config]
-  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#485982"
+  title_transmit_bg_color = "#6a88bb"
+  borderless = True
 [keybindings]
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_1 = <Alt>1
 [profiles]
   [[default]]
     use_system_font = False
     font = Envy Code R for Powerline 10
-    scrollback_infinite = True
     show_titlebar = False
+  [[produccion]]
+    foreground_color = "#e53c00"
 [layouts]
   [[default]]
     [[[child1]]]
