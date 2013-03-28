@@ -160,7 +160,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        #mode hide
+        mode hide
         colors{
         background #222222
         focused_workspace  #ffffff #DD4814
