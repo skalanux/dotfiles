@@ -9,9 +9,13 @@
   switch_to_tab_1 = <Alt>1
 [profiles]
   [[default]]
+    palette = "#021f18:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#e0e8e7"
+    cursor_shape = ibeam
     use_system_font = False
-    font = Envy Code R for Powerline 10
+    foreground_color = "#ffffff"
     show_titlebar = False
+    font = Envy Code R for Powerline 10
+    background_color = "#300a24"
   [[produccion]]
     foreground_color = "#e53c00"
 [layouts]

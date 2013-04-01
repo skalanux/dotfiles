@@ -1,7 +1,8 @@
 [NotebookList]
-Default=
+Default=~/Dropbox/Knowledge/zim/GTD
 ~/Dropbox/Knowledge/zim/chino
 ~/Dropbox/Knowledge/zim/devecoop
+~/Dropbox/Knowledge/zim/GTD
 
 [Notebook]
 uri=~/Dropbox/Knowledge/zim/chino
@@ -12,5 +13,11 @@ icon=None
 [Notebook]
 uri=~/Dropbox/Knowledge/zim/devecoop
 name=devecoop
+interwiki=None
+icon=None
+
+[Notebook]
+uri=~/Dropbox/Knowledge/zim/GTD
+name=GTD
 interwiki=None
 icon=None
