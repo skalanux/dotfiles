@@ -13,7 +13,6 @@
     cursor_shape = ibeam
     use_system_font = False
     foreground_color = "#ffffff"
-    show_titlebar = False
     font = Envy Code R for Powerline 10
     background_color = "#300a24"
   [[produccion]]

@@ -2,6 +2,7 @@
 Default=~/Dropbox/Knowledge/zim/hacking
 ~/Dropbox/Knowledge/zim/chino
 ~/Dropbox/Knowledge/zim/hacking
+~/Dropbox/Knowledge/zim/dgsisin
 
 [Notebook]
 uri=~/Dropbox/Knowledge/zim/chino
@@ -12,5 +13,11 @@ icon=None
 [Notebook]
 uri=~/Dropbox/Knowledge/zim/hacking
 name=Hacking
+interwiki=None
+icon=None
+
+[Notebook]
+uri=~/Dropbox/Knowledge/zim/dgsisin
+name=dgsisin
 interwiki=None
 icon=None
