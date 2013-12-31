@@ -13,7 +13,7 @@
     cursor_shape = ibeam
     use_system_font = False
     foreground_color = "#ffffff"
-    font = Envy Code R for Powerline 10
+    font = Envy Code R for Powerline 11
     background_color = "#300a24"
   [[produccion]]
     foreground_color = "#e53c00"

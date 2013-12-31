@@ -186,13 +186,13 @@ bindsym $mod+d exec ~/.i3/dropdown_dmenu.py
 exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
-for_window [instance="zim"] move to workspace 4
+for_window [instance="NixNote"] move to workspace 4
 #for_window [title="^Task\ Coach.*"] move to workspace 4
 
 #exec --no-startup-id taskcoach.py
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 
-exec --no-startup-id zim
+exec --no-startup-id nixnote
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
