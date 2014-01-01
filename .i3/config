@@ -21,7 +21,7 @@ set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #font xft:Droid Sans 10
-font xft:Ubuntu 10
+font xft:Noto Sans 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -187,6 +187,7 @@ exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="NixNote"] move to workspace 4
+for_window [instance="Qt\ Jambi.*"] move to workspace 4
 #for_window [title="^Task\ Coach.*"] move to workspace 4
 
 #exec --no-startup-id taskcoach.py
