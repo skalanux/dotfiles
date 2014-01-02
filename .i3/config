@@ -37,12 +37,6 @@ bindsym $mod+Shift+Q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ntilde focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -162,6 +156,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        verbose yes
         mode hide
         colors{
         background #222222
@@ -171,10 +166,10 @@ bar {
 
 exec gnome-settings-daemon
 # Start synapse in startup mode
+exec nm-applet
 exec synapse -s
 exec dropbox start
-exec nm-applet
-
+exec unclutter
 #set $font Ubuntu-10
 #set $selbgcolor #DD4814
 #set $dmc $(</tmp/dmenu.conf)
@@ -204,3 +199,8 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
 bindsym $mod+m [instance="Qt\ Jambi.*"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
+
+# xfce4-notify
+for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
+# # shutdown menu
+bindsym $mod+l exec ~/.i3/lockpanta
