@@ -195,7 +195,7 @@ for_window [instance="Qt\ Jambi.*"] move to scratchpad border 1 pixel
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 exec --no-startup-id urxvt -name master_volume -e alsamixer
 
-exec --no-startup-id nixndunst
+exec --no-startup-id nixnote
 exec --no-startup-id dunst
 
 bindsym $mod+Shift+minus move scratchpad
