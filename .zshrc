@@ -69,4 +69,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
+export WORKON_HOME=/srv/virtualenvs
+export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME/hooks
+source /usr/local/bin/virtualenvwrapper.sh
