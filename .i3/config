@@ -164,7 +164,7 @@ exec gnome-settings-daemon
 exec nm-applet
 exec synapse -s
 exec dropbox start
-exec unclutter
+#exec unclutter
 #set $font Ubuntu-10
 #set $selbgcolor #DD4814
 #set $dmc $(</tmp/dmenu.conf)

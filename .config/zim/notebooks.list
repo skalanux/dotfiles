@@ -1,23 +1,9 @@
 [NotebookList]
-Default=~/Dropbox/Knowledge/zim/hacking
-~/Dropbox/Knowledge/zim/chino
-~/Dropbox/Knowledge/zim/hacking
-~/Dropbox/Knowledge/zim/dgsisin
+Default=
+~/Notebooks/Notes
 
 [Notebook]
-uri=~/Dropbox/Knowledge/zim/chino
-name=chino
-interwiki=None
-icon=None
-
-[Notebook]
-uri=~/Dropbox/Knowledge/zim/hacking
-name=hacking
-interwiki=None
-icon=None
-
-[Notebook]
-uri=~/Dropbox/Knowledge/zim/dgsisin
-name=dgsisin
+uri=~/Notebooks/Notes
+name=Notes
 interwiki=None
 icon=None
