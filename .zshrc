@@ -72,3 +72,5 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export WORKON_HOME=/srv/virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME/hooks
 source /usr/local/bin/virtualenvwrapper.sh
+source /etc/zsh_command_not_found
+
