@@ -6,10 +6,11 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="toothe"
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="terminalparty"
 #ZSH_THEME="josh"
+ZSH_THEME="doubleend"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -49,9 +50,9 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git, virtualenv, virtualenvwrapper, python)
-
 source $ZSH/oh-my-zsh.sh
+plugins=(git, git-prompt, virtualenv, virtualenvwrapper, python)
+
 
 # User configuration
 
@@ -74,4 +75,3 @@ export WORKON_HOME=/srv/virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME/hooks
 source /usr/local/bin/virtualenvwrapper.sh
 source /etc/zsh_command_not_found
-
