@@ -101,3 +101,14 @@ Notebooks/
 Proyectos/
 VirtualBox VMs/
 .ssh/id_rsa*
+.config/everpad/
+.config/google-chrome/
+.config/ibus/
+.config/monitors.xml.backup
+.config/tint2/
+.everpad/
+.gnome/
+.lfmrc
+.pki/
+.ssh/
+.vifm/
