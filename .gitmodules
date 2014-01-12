@@ -1,0 +1,3 @@
+[submodule ".i3/everpad-note-launch"]
+	path = .i3/everpad-note-launch
+	url = git@github.com:skalanux/everpad-note-launch.git
