@@ -10,9 +10,9 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # class                 border  backgr. text    indicator
-client.focused          #333333 #333333 #D64937 #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
+client.focused          #2d2d2d #2d2d2d #D64937 #2e9ef4
+client.focused_inactive #2d2d2d #2d2d2d #ffffff #484e50
+client.unfocused        #2d2d2d #2d2d2d #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 
 set $mod Mod4
@@ -21,7 +21,7 @@ set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #font xft:Droid Sans 10
-font xft:Noto Sans 10
+font xft:Noto Sans 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -29,7 +29,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec terminator
 bindsym $mod+b exec firefox
-bindsym $mod+n exec nautilus
+bindsym $mod+Shift+n exec nautilus
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -178,12 +178,16 @@ exec --no-startup-id xsetroot -solid "#111111"
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="NixNote"] move to scratchpad border 1 pixel
 for_window [instance="master_volume"] move to scratchpad border 1 pixel
+for_window [instance="urxvt_lfm"] move to scratchpad border 1 pixel
+for_window [instance="urxvt_zsh"] move to scratchpad border 1 pixel
 for_window [instance="Qt\ Jambi.*"] move to scratchpad border 1 pixel
 #for_window [title="^Task\ Coach.*"] move to workspace 4
 
 #exec --no-startup-id taskcoach.py
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 exec --no-startup-id urxvt -name master_volume -e alsamixer
+exec --no-startup-id urxvt -name urxvt_lfm -e lfm
+exec --no-startup-id urxvt -name urxvt_zsh
 
 exec --no-startup-id nixnote
 #exec --no-startup-id dunst
@@ -192,8 +196,10 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
+bindsym $mod+n [instance="urxvt_lfm"] scratchpad show
 bindsym $mod+m [instance="Qt\ Jambi.*"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
+bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
