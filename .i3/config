@@ -30,8 +30,8 @@ floating_modifier $mod
 bindsym $mod+Return exec terminator
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+n exec nautilus
-bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
-bindsym $mod+F3 exec killall trayer
+#bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
+#bindsym $mod+F3 exec killall trayer
 
 
 # kill focused window
@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command py3status -c ~/.i3/i3status.conf
-        #mode hide
+        mode hide
         tray_output none
         colors{
         background #222222
@@ -173,10 +173,11 @@ exec dropbox start
 #set $dmc $(</tmp/dmenu.conf)
 #exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
 #bindsym $mod+d exec dmenu_run $dmc
-bindsym $mod+d exec ~/.i3/dropdown_dmenu.py
+#bindsym $mod+d exec ~/.i3/dropdown_dmenu.py
+bindsym $mod+d exec ~/.i3/everpad-note-launch/everpad_note_launch.py
 #bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
 
-exec --no-startup-id xsetroot -solid "#111111"
+#exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="NixNote"] move to scratchpad border 1 pixel
@@ -191,8 +192,10 @@ exec --no-startup-id urxvt -name urxvt_python -e ipython
 exec --no-startup-id urxvt -name master_volume -e alsamixer
 exec --no-startup-id urxvt -name urxvt_lfm -e lfm
 exec --no-startup-id urxvt -name urxvt_zsh
+exec --no-startup-id trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
 
-exec --no-startup-id nixnote
+#exec --no-startup-id nixnote
+exec --no-startup-id everpad
 #exec --no-startup-id dunst
 
 bindsym $mod+Shift+minus move scratchpad
@@ -200,7 +203,7 @@ bindsym $mod+minus scratchpad show
 
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
 bindsym $mod+n [instance="urxvt_lfm"] scratchpad show
-bindsym $mod+m [instance="Qt\ Jambi.*"] scratchpad show
+#bindsym $mod+m [instance="Qt\ Jambi.*"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
 bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
 
