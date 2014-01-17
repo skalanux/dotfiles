@@ -164,17 +164,18 @@ bar {
         }
 }
 
-exec gnome-settings-daemon
+exec --no-startup-id gnome-settings-daemon
 # Start synapse in startup mode
-exec nm-applet
-exec synapse -s
-exec dropbox start
+exec --no-startup-id nm-applet
+exec --no-startup-id synapse -s
+exec --no-startup-id dropbox start
+exec --no-startup-id i3-msg 'workspace 4;exec --no-startup-id everpad;workspace 1'
 
 # This is my note # 63 wich holds all the shortcuts I use
-exec everpad --open 63
+#exec --no-startup-id everpad --open 63
 
 # This is my note # 65 a scratchpad for day to day use
-exec everpad --open 65
+#exec --no-startup-id everpad --open 65
 #exec unclutter
 #set $font Ubuntu-10
 #set $selbgcolor #DD4814
@@ -188,20 +189,21 @@ bindsym $mod+d exec ~/.i3/everpad-note-launch/everpad_note_launch.py
 #exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
-for_window [instance="master_volume"] move to scratchpad border 1 pixel
-for_window [instance="urxvt_lfm"] move to scratchpad border 1 pixel
-for_window [instance="urxvt_zsh"] move to scratchpad border 1 pixel
-for_window [title="Everpad / Shortcuts que no recuerdo tanto"] move to scratchpad border 1 pixel
-for_window [title="Everpad / Scratchpad del dia a dia"] move to scratchpad border 1 pixel
+for_window [instance="master_volume"] move to scratchpad border 1pixel
+for_window [instance="urxvt_lfm"] move to scratchpad border 1pixel
+for_window [instance="urxvt_zsh"] move to scratchpad border 1pixel
+for_window [instance="urxvt_vimscratchpad"] move to scratchpad border 1pixel
+#for_window [title="Everpad / Shortcuts que no recuerdo tanto"] move to scratchpad border 1 pixel
+#for_window [title="Everpad / Scratchpad del dia a dia"] move to scratchpad border 1 pixel
 
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 exec --no-startup-id urxvt -name master_volume -e alsamixer
 exec --no-startup-id urxvt -name urxvt_lfm -e lfm
 exec --no-startup-id urxvt -name urxvt_zsh
+exec --no-startup-id urxvt -name urxvt_vimscratchpad -e vim ~/scratchpad
 # I have to use trayer as a suplement because i3bar tray does not behave correctly
 exec --no-startup-id trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
 
-exec --no-startup-id everpad
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -209,8 +211,9 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
 bindsym $mod+n [instance="urxvt_lfm"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
-bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
-bindsym $mod+less [title="Everpad / Scratchpad del dia a dia"] scratchpad show
+#bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
+#bindsym $mod+less [title="Everpad / Scratchpad del dia a dia"] scratchpad show 
+bindsym $mod+less [instance="urxvt_vimscratchpad"] scratchpad show 
 bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
 
 # xfce4-notify
