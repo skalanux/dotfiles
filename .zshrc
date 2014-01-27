@@ -73,6 +73,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 export WORKON_HOME=/srv/virtualenvs
 export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME/hooks
+export PROJECT_HOME=~/Dropbox/Projects/Personales
 source /usr/local/bin/virtualenvwrapper.sh
 source /etc/zsh_command_not_found
 
