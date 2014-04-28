@@ -203,6 +203,7 @@ exec --no-startup-id urxvt -name urxvt_zsh
 exec --no-startup-id urxvt -name urxvt_vimscratchpad -e vim ~/scratchpad
 # I have to use trayer as a suplement because i3bar tray does not behave correctly
 exec --no-startup-id trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
+#exec --no-startup-id wingpanel
 
 
 bindsym $mod+Shift+minus move scratchpad

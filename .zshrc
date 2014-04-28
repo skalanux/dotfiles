@@ -89,3 +89,5 @@ if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:ssh:*' hosts $h
   zstyle ':completion:*:slogin:*' hosts $h
 fi
+
+[ -s "/home/ska/.nvm/nvm.sh" ] && . "/home/ska/.nvm/nvm.sh" # This loads nvm
