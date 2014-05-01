@@ -260,7 +260,7 @@ screens = [
                                 padding = 1,),
                 widget.Prompt(),
                 widget.WindowName(foreground = "a0a0a0",),
-                widget.Notify(),
+                #widget.Notify(),
                 widget.Systray(),
                 widget.CurrentLayout(),
                 widget.Volume(foreground = "70ff70",),
@@ -305,6 +305,7 @@ def startup():
     execute_once("dropbox start")
     execute_once("synapse -s")
     execute_once("guake")
+    execute_once("/usr/bin/everpad")
 
 @hook.subscribe.client_new
 def dialogs(window):
