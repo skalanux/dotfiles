@@ -248,6 +248,7 @@ layouts = [
     layout.Tile(**border),
     layout.RatioTile(**border),
     layout.MonadTall(**border),
+    layout.TreeTab(**border),
 ]
 
 screens = [
@@ -301,6 +302,7 @@ def execute_once(process):
 def startup():
     execute_once("setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps")
     execute_once("xsetroot -solid #0E0D0E")
+    execute_once("gnome-settings-daemon")
     execute_once("nm-applet")
     execute_once("dropbox start")
     execute_once("synapse -s")
