@@ -157,7 +157,7 @@ keys = [
     Key([mod], "t", lazy.function(switch_to("Gajim"))),
 
     # use like a cheap guake replacement
-    Key([], "F12", lazy.function(SwapGroup('h4x'))),
+    Key([], "F12", lazy.function(SwapGroup('code'))),
     Key(['shift'], "F12", lazy.function(to_urgent)),
 ]
 
@@ -177,8 +177,8 @@ mouse = [
 
 groups = [
       # first group that hold the terminals
-      Group('h4x', exclusive=True,
-          matches=[Match(wm_class=['Qterminal', 'Terminator'])]
+      Group('code', exclusive=True,
+          matches=[Match(wm_class=['Terminator'])]
           ),
 
       # the next groups do not auto start, only appears if the rule is matched
@@ -211,14 +211,9 @@ groups = [
 
       # Tile Groups
       # --------------
-      Group('emesene', init=False, persist=False, layout='tile',
-          matches=[Match(wm_class=['emesene'])],
+      Group('skype', init=False, persist=False, layout='tile',
+          matches=[Match(wm_class=['skype'])],
           layout_opts={"ratio": 0.25, "master_match": Match(role=['main'])},
-          ),
-      Group('im', init=False, persist=False, layout='tile',
-          matches=[Match(wm_class=['Gajim.py'])],
-          # set the roster as master window and ratio 0.20
-          layout_opts={"ratio": 0.20, "master_match": Match(role=['roster'])},
           ),
     ]
 
