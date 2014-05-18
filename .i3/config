@@ -37,7 +37,7 @@ bindsym $mod+x exec everpad --create
 
 
 # kill focused window
-bindsym $mod+c kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
@@ -78,7 +78,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindcode $mod+d focus child
+bindcode $mod+c focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1 www
@@ -226,3 +226,6 @@ for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggl
 bindsym $mod+l exec ~/.i3/lockpanta
 
 bindsym $mod+less exec quickswitch.py
+
+bindsym    Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
+
