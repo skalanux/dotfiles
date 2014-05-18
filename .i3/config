@@ -27,7 +27,7 @@ font xft:Noto Sans 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator, i3-msg focus
+bindsym $mod+Return exec terminator
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+x exec everpad --create
