@@ -29,7 +29,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec terminator
 bindsym $mod+b exec firefox
-bindsym $mod+Shift+n exec nautilus
+bindsym $mod+n exec marlin
 bindsym $mod+x exec everpad --create
 
 #bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
@@ -166,16 +166,15 @@ bar {
 }
 
 exec --no-startup-id compton
-exec --no-startup-id gnome-settings-daemon
+#exec --no-startup-id gnome-settings-daemon
 # Start synapse in startup mode
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id dropbox start
 exec --no-startup-id i3-msg 'workspace 4;exec --no-startup-id everpad;workspace 1 www'
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
-
 # This is my note # 63 wich holds all the shortcuts I use
-#exec --no-startup-id everpad --open 63
+exec --no-startup-id udiskie
 
 # This is my note # 65 a scratchpad for day to day use
 #exec --no-startup-id everpad --open 65
@@ -202,7 +201,7 @@ for_window [instance="synapse"] border none
 
 exec --no-startup-id urxvt -name urxvt_python -e ipython
 exec --no-startup-id urxvt -name master_volume -e alsamixer
-exec --no-startup-id urxvt -name urxvt_mc -e mc
+#exec --no-startup-id urxvt -name urxvt_mc -e mc
 exec --no-startup-id urxvt -name urxvt_zsh
 #exec --no-startup-id urxvt -name urxvt_vimscratchpad -e vim ~/scratchpad
 # I have to use trayer as a suplement because i3bar tray does not behave correctly
@@ -214,7 +213,7 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
-bindsym $mod+n [instance="urxvt_mc"] scratchpad show
+#bindsym $mod+Shift+n [instance="urxvt_mc"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
 #bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
 #bindsym $mod+less [instance="urxvt_vimscratchpad"] scratchpad show 

@@ -61,8 +61,8 @@ start ()
         (v)
         focus title VIM terminator -x vim
         ;;
-        (na)
-        focus instance nautilus nautilus
+        (ma)
+        focus instance marlin marlin
         ;;
         (ca)
         focus title Calculator xcalc
