@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -10,7 +10,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="gnzh"
 #ZSH_THEME="terminalparty"
 #ZSH_THEME="josh"
-ZSH_THEME="doubleend"
+#ZSH_THEME="doubleend"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -50,11 +50,15 @@ ZSH_THEME="doubleend"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-source $ZSH/oh-my-zsh.sh
-plugins=(git, git-prompt, virtualenv, virtualenvwrapper, python)
+#source $ZSH/oh-my-zsh.sh
+#plugins=(git, git-prompt, virtualenv, virtualenvwrapper, python)
 
 
 # User configuration
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"

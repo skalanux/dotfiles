@@ -228,4 +228,4 @@ bindsym $mod+less exec quickswitch.py
 
 bindsym    Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
 
-for_window [instance=".*"] exec python ~./.i3/check_status.py
+#for_window [instance=".*"] exec python ~./.i3/check_status.py
