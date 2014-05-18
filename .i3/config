@@ -27,7 +27,7 @@ font xft:Noto Sans 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec terminator, i3-msg focus
 bindsym $mod+b exec firefox
 bindsym $mod+Shift+n exec nautilus
 bindsym $mod+x exec everpad --create
@@ -217,7 +217,6 @@ bindsym $mod+i [instance="urxvt_python"] scratchpad show
 bindsym $mod+n [instance="urxvt_mc"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
 #bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
-#bindsym $mod+less [title="Everpad / Scratchpad del dia a dia"] scratchpad show 
 #bindsym $mod+less [instance="urxvt_vimscratchpad"] scratchpad show 
 bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
 
@@ -225,3 +224,5 @@ bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 
 bindsym $mod+l exec ~/.i3/lockpanta
+
+bindsym $mod+less exec quickswitch.py
