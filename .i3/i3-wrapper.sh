@@ -52,34 +52,28 @@ start ()
         (ff)
         focus title Firefox firefox
         ;;
-        (tra)
+        (tr)
         focus title Transmission transmission-gtk
         ;;
-        (ter)
+        (te)
         focus instance terminator terminator
         ;;
-        (vim)
+        (v)
         focus title VIM terminator -x vim
         ;;
         (na)
         focus instance nautilus nautilus
         ;;
-        (calc)
+        (ca)
         focus title Calculator xcalc
         ;;
-        (wr)
+        (lo)
         focus title 'LibreOffice Writer' libreoffice --writer
         ;;
-        (pp)
-        focus title 'LibreOffice Impress' libreoffice --impress
-        ;;
-        (ss)
-        focus title 'LibreOffice Calc' libreoffice --calc
-        ;;
-        (vc|vlc)
+        (vl)
         focus instance vlc vlc
         ;;
-        (sk|sky)
+        (s)
         focus instance skype skype
         ;;
         (*)
