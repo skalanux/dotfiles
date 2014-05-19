@@ -29,7 +29,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec terminator
 bindsym $mod+b exec firefox
-bindsym $mod+n exec marlin
+bindsym $mod+n exec pantheon-files
 bindsym $mod+x exec everpad --create
 
 #bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0

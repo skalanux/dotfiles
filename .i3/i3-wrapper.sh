@@ -61,8 +61,8 @@ start ()
         (v)
         focus title VIM terminator -x vim
         ;;
-        (ma)
-        focus instance marlin marlin
+        (na)
+        focus instance pantheon-files pantheon-files
         ;;
         (ca)
         focus title Calculator xcalc
@@ -72,6 +72,9 @@ start ()
         ;;
         (vl)
         focus instance vlc vlc
+        ;;
+        (em)
+        focus title emacs terminator -x emacs -nw
         ;;
         (s)
         focus instance skype skype
