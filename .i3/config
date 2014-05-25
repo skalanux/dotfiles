@@ -27,9 +27,9 @@ font xft:Noto Sans 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt -e tmux 
 bindsym $mod+b exec firefox
-bindsym $mod+n exec pantheon-files
+bindsym $mod+n exec nautilus
 bindsym $mod+x exec everpad --create
 
 #bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
@@ -59,7 +59,7 @@ bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
-
+ 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -165,6 +165,7 @@ bar {
 }
 }
 
+exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
 # Start synapse in startup mode
