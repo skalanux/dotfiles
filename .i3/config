@@ -166,7 +166,7 @@ bar {
 }
 
 exec --no-startup-id compton
-#exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id gnome-settings-daemon
 # Start synapse in startup mode
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
