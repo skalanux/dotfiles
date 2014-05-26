@@ -30,7 +30,7 @@ URxvt*shading:            110
 ! URxvt*tripleclickwords:   boolean
 ! URxvt*insecure:           boolean
 ! URxvt*cursorUnderline:    boolean
-! URxvt*cursorBlink:        boolean
+URxvt*cursorBlink:        true
 ! URxvt*pointerBlank:       boolean
 URxvt.background: rgba:1111/1111/1111/dddd
 ! URxvt*foreground:         color
