@@ -15,6 +15,8 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias em="printf \\033]0\;\%s\\007 'emacs';emacsclient -t"
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

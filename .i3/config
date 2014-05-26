@@ -27,7 +27,7 @@ font xft:Noto Sans 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -e tmux 
+bindsym $mod+Return exec urxvtcd -e tmux 
 bindsym $mod+b exec firefox
 bindsym $mod+n exec nautilus
 bindsym $mod+x exec everpad --create
@@ -165,8 +165,10 @@ bar {
 }
 }
 
+exec urxvtd -q -o -f
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
+exec emacs --daemon
 exec --no-startup-id gnome-settings-daemon
 # Start synapse in startup mode
 exec --no-startup-id synapse -s
@@ -189,7 +191,7 @@ exec --no-startup-id udiskie
 bindsym $mod+d exec ~/.i3/everpad-note-launch/everpad_note_launch.py
 #bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
 
-#exec --no-startup-id xsetroot -solid "#111111"
+exec --no-startup-id xsetroot -solid "#111111"
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
@@ -200,11 +202,11 @@ for_window [instance="synapse"] border none
 #for_window [title="Everpad / Shortcuts que no recuerdo tanto"] move to scratchpad border 1 pixel
 #for_window [title="Everpad / Scratchpad del dia a dia"] move to scratchpad border 1 pixel
 
-exec --no-startup-id urxvt -name urxvt_python -e ipython
-exec --no-startup-id urxvt -name master_volume -e alsamixer
-#exec --no-startup-id urxvt -name urxvt_mc -e mc
-exec --no-startup-id urxvt -name urxvt_zsh
-#exec --no-startup-id urxvt -name urxvt_vimscratchpad -e vim ~/scratchpad
+exec --no-startup-id urxvtc -name urxvt_python -e ipython
+exec --no-startup-id urxvtc -name master_volume -e alsamixer
+#exec --no-startup-id urxvtc -name urxvt_mc -e mc
+exec --no-startup-id urxvtc -name urxvt_zsh
+#exec --no-startup-id urxvtc -name urxvt_vimscratchpad -e vim ~/scratchpad
 # I have to use trayer as a suplement because i3bar tray does not behave correctly
 #exec --no-startup-id trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
 #exec --no-startup-id wingpanel
@@ -218,7 +220,7 @@ bindsym $mod+i [instance="urxvt_python"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
 #bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
 #bindsym $mod+less [instance="urxvt_vimscratchpad"] scratchpad show 
-bindsym $mod+z [instance="urxvt_zsh"] scratchpad show
+bindsym F12 [instance="urxvt_zsh"] scratchpad show
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
