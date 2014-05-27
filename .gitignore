@@ -1,5 +1,6 @@
 *.pyc
 *.egg-info
+.zprezto
 build/
 dist/
 docs/_build
