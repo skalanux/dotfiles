@@ -28,7 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvtc -e tmux
-bindsym $mod+b exec firefox
+bindsym $mod+b exec firefox -no-remote -p default
 bindsym $mod+n exec nautilus
 bindsym $mod+x exec everpad --create
 

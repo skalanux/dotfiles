@@ -77,7 +77,7 @@ start ()
         focus title emacs terminator -x emacs -nw
         ;;
         (s)
-        focus instance skype skype
+        focus title Slack firefox -no-remote -P slack
         ;;
         (*)
         "$@" &
