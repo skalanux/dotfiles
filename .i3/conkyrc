@@ -14,6 +14,7 @@ TEXT
 
 {"full_text": " ≣ $battery_percent% ","color":"\#9933CC"},
   {"full_text": " ♪ $mixer% ", "color":"\#268BD2"},
-  {"full_text": " ${time %a %d %b} ${time %H:%M} "}
-]
+  {"full_text": " ${time %a %d %b} ${time %H:%M} "},
+{"full_text": " ✉ ${exec cat /tmp/unread_notifications}", "color":"\#FAD613"}
 
+]
