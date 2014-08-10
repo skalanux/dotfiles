@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import io
 
+import i3
+
 UNREAD_FILE = "/tmp/unread_notifications"
 
 def reset_counter_file():
@@ -13,3 +15,4 @@ def reset_counter_file():
 
 if __name__=="__main__":
     reset_counter_file()
+    i3.focus(title="Devecoop Slack")

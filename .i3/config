@@ -21,13 +21,13 @@ set $mod Mod4
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
 #font xft:Droid Sans 10
-font xft:Noto Sans 9
+font xft:Noto Sans,FontAwesome 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc -e tmux
+bindsym $mod+Return exec gnome-terminal -e tmux
 bindsym $mod+b exec firefox -no-remote -p default
 bindsym $mod+n exec nautilus
 bindsym $mod+x exec everpad --create
@@ -155,9 +155,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position bottom
-        status_command ~/.i3/conky
-
+        #status_command ~/.i3/conky
+        status_command i3blocks
         colors{
+
         background #222222
         focused_workspace #d64937 #222222 #d64937
         inactive_workspace #dddddd #222222 #dddddd
