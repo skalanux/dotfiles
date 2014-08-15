@@ -160,6 +160,6 @@ URxvt.background: rgba:1111/1111/1111/dddd
 ! URxvt*xrm:                string
 ! URxvt*keysym.sym:         keysym
 URxvt.depth: 32
-!URxvt.font: xft:Envy Code R for Powerline :pixelsize=13
-URxvt.font: xft:Ubuntu mono :pixelsize=13
+URxvt.font: xft:Envy Code R for Powerline :pixelsize=12
+!URxvt.font: xft:Ubuntu mono :pixelsize=13
 URxvt*letterSpace: -1
