@@ -97,3 +97,5 @@ if [[ $#h -gt 0 ]]; then
 fi
 
 [ -s "/home/ska/.nvm/nvm.sh" ] && . "/home/ska/.nvm/nvm.sh" # This loads nvm
+
+TERM=screen-256color
