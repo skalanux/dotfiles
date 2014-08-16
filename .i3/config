@@ -32,7 +32,8 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal
-bindsym $mod+Return exec urxvt -e tmux
+#bindsym $mod+Return exec urxvt -e tmux
+bindsym $mod+Return exec xfce4-terminal -e tmux
 bindsym $mod+b exec firefox -no-remote -p default
 bindsym $mod+n exec nautilus
 bindsym $mod+x exec everpad --create
@@ -186,7 +187,7 @@ exec --no-startup-id ~/.i3/conkyblocks
 # Start synapse in startup mode
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
-exec --no-startup-id dropbox start
+exec --no-startup-id nice -n 10 dropbox start
 exec --no-startup-id i3-msg 'workspace 4;exec --no-startup-id everpad;workspace 1 www'
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
 # This is my note # 63 wich holds all the shortcuts I use
