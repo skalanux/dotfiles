@@ -14,7 +14,6 @@ docs/_build
 .bzr.log
 .cache/
 .config/AbiSuite/
-.config/Terminal/
 .config/Thunar/
 .config/Trolltech.conf
 .config/autostart/
