@@ -13,8 +13,8 @@
 #client.focused          #2d2d2d #2d2d2d #d64937 #2e9ef4
 client.focused          #2d2d2d #2d2d2d #009999 #2e9ef4
 client.focused_inactive #2d2d2d #2d2d2d #ffffff #484e50
-client.unfocused        #2d2d2d #2d2d2d #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+client.unfocused        #242424 #242424 #888888 #292d2e
+client.urgent           #242424 #900000 #ffffff #900000
 
 #client.focused #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
 #client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
@@ -166,7 +166,7 @@ bar {
         status_command i3blocks
         colors{
 
-        background #222222
+        background #242424
         #focused_workspace #d64937 #222222 #d64937
         #inactive_workspace #dddddd #222222 #dddddd
 
