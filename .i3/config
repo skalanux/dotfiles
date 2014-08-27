@@ -11,14 +11,15 @@
 
 # class                 border  backgr. text    indicator
 #client.focused          #2d2d2d #2d2d2d #d64937 #2e9ef4
-#client.focused_inactive #2d2d2d #2d2d2d #ffffff #484e50
-#client.unfocused        #2d2d2d #2d2d2d #888888 #292d2e
-#client.urgent           #2f343a #900000 #ffffff #900000
+client.focused          #2d2d2d #2d2d2d #009999 #2e9ef4
+client.focused_inactive #2d2d2d #2d2d2d #ffffff #484e50
+client.unfocused        #2d2d2d #2d2d2d #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
 
-client.focused #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+#client.focused #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
+#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+#client.unfocused #073642 #073642 #93a1a1 #586e75
+#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
@@ -35,7 +36,7 @@ floating_modifier $mod
 #bindsym $mod+Return exec urxvt -e tmux
 bindsym $mod+Return exec xfce4-terminal -e tmux
 bindsym $mod+b exec firefox -no-remote -p default
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec nemo --no-desktop
 bindsym $mod+x exec everpad --create
 
 #bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
