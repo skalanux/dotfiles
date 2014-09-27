@@ -31,6 +31,10 @@ font xft:Ubuntu,FontAwesome 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# workspace layout
+workspace_layout tabbed
+
+
 # start a terminal
 #bindsym $mod+Return exec gnome-terminal
 #bindsym $mod+Return exec urxvt -e tmux

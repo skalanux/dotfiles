@@ -99,3 +99,21 @@ fi
 [ -s "/home/ska/.nvm/nvm.sh" ] && . "/home/ska/.nvm/nvm.sh" # This loads nvm
 
 TERM=screen-256color
+
+
+case $TERM in
+  (screen-256color)
+
+    # Write some info to terminal title.
+    # This is seen when the shell prompts for input.
+    function precmd {
+      print -Pn "\e]0;zsh%L %(1j,%j job%(2j|s|); ,)%~\a"
+    }
+    # Write command and args to terminal title.
+    # This is seen while the shell waits for a command to complete.
+    function preexec {
+      printf "\033]0;%s\a" "$1"
+    }
+
+  ;;
+esac
