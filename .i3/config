@@ -230,7 +230,7 @@ exec --no-startup-id udiskie
 #bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
 
 #exec --no-startup-id xsetroot -solid "#111111"
-exec --no-startup-id fbsetroot -gradient Horizontal -from SlateGrey -to SlatBlue
+exec --no-startup-id feh --bg-scale ~/Imágenes/fondo-actual.jpg
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
