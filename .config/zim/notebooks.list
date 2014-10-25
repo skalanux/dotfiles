@@ -1,9 +1,16 @@
 [NotebookList]
-Default=
+Default=~/Dropbox/Aplicaciones/Zim/MainNotes
 ~/Notebooks/Notes
+~/Dropbox/Aplicaciones/Zim/MainNotes
 
 [Notebook]
 uri=~/Notebooks/Notes
 name=Notes
+interwiki=None
+icon=None
+
+[Notebook]
+uri=~/Dropbox/Aplicaciones/Zim/MainNotes
+name=MainNotes
 interwiki=None
 icon=None
