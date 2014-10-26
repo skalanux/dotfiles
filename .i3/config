@@ -10,48 +10,29 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # class                 border  backgr. text    indicator
-#client.focused          #2d2d2d #2d2d2d #d64937 #2e9ef4
 client.focused          #2d2d2d #2d2d2d #009999 #2e9ef4
 client.focused_inactive #2d2d2d #2d2d2d #ffffff #484e50
 client.unfocused        #242424 #242424 #888888 #292d2e
 client.urgent           #242424 #900000 #ffffff #900000
 
-#client.focused #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
-#client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-#client.unfocused #073642 #073642 #93a1a1 #586e75
-#client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 set $mod Mod4
 
-# font for window titles. ISO 10646 = Unicode
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-#font xft:Droid Sans 10
 font xft:Ubuntu,FontAwesome 10
 
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # workspace layout
 workspace_layout tabbed
 
-
-# start a terminal
-#bindsym $mod+Return exec gnome-terminal
-#bindsym $mod+Return exec urxvt -e tmux
 bindsym $mod+Return exec xfce4-terminal -e tmux
 bindsym $mod+b exec firefox -no-remote -p default
 bindsym $mod+n exec nautilus --no-desktop
-#bindsym $mod+x exec everpad --create
-
-#bindsym $mod+F2 exec trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
-#bindsym $mod+F3 exec killall trayer
-
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -70,7 +51,7 @@ bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
- 
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
@@ -119,155 +100,99 @@ bindsym $mod+Shift+equal move workspace 10
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+E exit
-
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-bindsym l exec --no-startup-id ~/.i3/i3exit lock, mode "default"
-bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
-bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
-bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
-bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
-bindsym Shift+s exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/.i3/i3exit lock, mode "default"
+        bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
+        bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
+        bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
+        bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
+        bindsym Shift+s exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
 # back to normal: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "$mode_system"
 
-
-
-
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
+    bindsym j resize shrink left 10 px or 10 ppt
+        bindsym Shift+J resize grow   left 10 px or 10 ppt
 
-bindsym j resize shrink left 10 px or 10 ppt
-bindsym Shift+J resize grow   left 10 px or 10 ppt
+        bindsym k resize shrink down 10 px or 10 ppt
+        bindsym Shift+K resize grow   down 10 px or 10 ppt
 
-bindsym k resize shrink down 10 px or 10 ppt
-bindsym Shift+K resize grow   down 10 px or 10 ppt
+        bindsym l resize shrink up 10 px or 10 ppt
+        bindsym Shift+L resize grow   up 10 px or 10 ppt
 
-bindsym l resize shrink up 10 px or 10 ppt
-bindsym Shift+L resize grow   up 10 px or 10 ppt
-
-bindsym ntilde resize shrink right 10 px or 10 ppt
-bindsym Shift+Ntilde resize grow   right 10 px or 10 ppt
+        bindsym ntilde resize shrink right 10 px or 10 ppt
+        bindsym Shift+Ntilde resize grow   right 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-bindsym Left resize shrink left 10 px or 10 ppt
-bindsym Shift+Left resize grow   left 10 px or 10 ppt
+        bindsym Left resize shrink left 10 px or 10 ppt
+        bindsym Shift+Left resize grow   left 10 px or 10 ppt
 
-bindsym Down resize shrink down 10 px or 10 ppt
-bindsym Shift+Down resize grow   down 10 px or 10 ppt
+        bindsym Down resize shrink down 10 px or 10 ppt
+        bindsym Shift+Down resize grow   down 10 px or 10 ppt
 
-bindsym Up resize shrink up 10 px or 10 ppt
-bindsym Shift+Up resize grow   up 10 px or 10 ppt
+        bindsym Up resize shrink up 10 px or 10 ppt
+        bindsym Shift+Up resize grow   up 10 px or 10 ppt
 
-bindsym Right resize shrink right 10 px or 10 ppt
-bindsym Shift+Right resize grow   right 10 px or 10 ppt
+        bindsym Right resize shrink right 10 px or 10 ppt
+        bindsym Shift+Right resize grow   right 10 px or 10 ppt
 
         # back to normal: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position bottom
-        #status_command ~/.i3/conky
-        status_command i3blocks
-        colors{
-
+    position bottom
+    status_command i3blocks
+    colors{
         background #242424
-        #focused_workspace #d64937 #222222 #d64937
-        #inactive_workspace #dddddd #222222 #dddddd
-
-#focused_workspace #859900 #859900 #fdf6e3 #859900
-focused_workspace #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
-inactive_workspace #073642 #073642 #eee8d5 #6c71c4
-
-
+        focused_workspace #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
+        inactive_workspace #073642 #073642 #eee8d5 #6c71c4
         statusline #d64937
-}
+        }
 }
 
 exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer;urxvtc -name urxvt_zsh
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
-#exec --no-startup-id emacs --daemon
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id ~/.i3/conkyblocks
-# Start synapse in startup mode
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
-#exec --no-startup-id i3-msg 'workspace 4;exec --no-startup-id everpad;workspace 1 www'
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
-# This is my note # 63 wich holds all the shortcuts I use
 exec --no-startup-id udiskie
 
-# This is my note # 65 a scratchpad for day to day use
-#exec --no-startup-id everpad --open 65
-#exec unclutter
-#set $font Ubuntu-10
-#set $selbgcolor #DD4814
-#set $dmc $(</tmp/dmenu.conf)
-#exec --no-startup-id echo '-i -fn $font -sb $selbgcolor' > /tmp/dmenu.conf
-#bindsym $mod+d exec dmenu_run $dmc
-#bindsym $mod+d exec ~/.i3/dropdown_dmenu.py
-#bindsym $mod+d exec ~/.i3/everpad-note-launch/everpad_note_launch.py
-#bindsym $mod+m exec --no-startup-id i3-dmenu-desktop --dmenu="/usr/local/bin/dmenu $dmc"
-
-#exec --no-startup-id xsetroot -solid "#111111"
 exec --no-startup-id feh --bg-scale ~/Imágenes/fondo-actual.jpg
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [instance="urxvt_mc"] move to scratchpad border 1pixel
 for_window [instance="urxvt_zsh"] move to scratchpad border 1pixel
-#for_window [instance="urxvt_vimscratchpad"] move to scratchpad border 1pixel
 for_window [instance="synapse"] border none
-#for_window [title="Everpad / Shortcuts que no recuerdo tanto"] move to scratchpad border 1 pixel
-#for_window [title="Everpad / Scratchpad del dia a dia"] move to scratchpad border 1 pixel
 
 exec --no-startup-id urxvtc -name urxvt_python -e ipython
 exec --no-startup-id urxvtc -name master_volume -e alsamixer
-#exec --no-startup-id urxvtc -name urxvt_mc -e mc
-#exec --no-startup-id urxvtc -name urxvt_zsh
-#exec --no-startup-id urxvtc -name urxvt_vimscratchpad -e vim ~/scratchpad
-# I have to use trayer as a suplement because i3bar tray does not behave correctly
-#exec --no-startup-id trayer --edge bottom --align right --SetDockType true --SetPartialStrut true --expand false --width 10 --height 17 --transparent true --tint 0x000000 --alpha 0
-#exec --no-startup-id wingpanel
-
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
-#bindsym $mod+Shift+n [instance="urxvt_mc"] scratchpad show
 bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
-#bindsym $mod+F1 [title="Everpad / Shortcuts que no recuerdo tanto"] scratchpad show
-#bindsym $mod+less [instance="urxvt_vimscratchpad"] scratchpad show 
 bindsym F12 [instance="urxvt_zsh"] scratchpad show
 
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
-
 bindsym $mod+l exec ~/.i3/lockpanta
-
 bindsym $mod+less exec ~/.i3/reset_readmessages.py
-
-bindsym    Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
-
-#for_window [instance=".*"] exec python ~./.i3/check_status.py
+bindsym Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
