@@ -175,7 +175,8 @@ bar {
         }
 }
 
-exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer
+exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer; urxvtc -name urxvt_zsh -e tmux
+
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
@@ -191,6 +192,7 @@ exec --no-startup-id xcalc
 exec --no-startup-id feh --bg-scale ~/Imágenes/fondo-actual.jpg
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
+for_window [instance="urxvt_zsh"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
 for_window [class="Xfce4-notes"] move to scratchpad border 1pixel
@@ -202,7 +204,8 @@ exec --no-startup-id urxvtc -name master_volume -e alsamixer
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-bindsym $mod+i [instance="urxvt_python"] scratchpad show
+bindsym F7 [instance="urxvt_python"] scratchpad show
+bindsym F8 [instance="urxvt_zsh"] scratchpad show
 bindsym F9 [instance="master_volume"] scratchpad show
 bindsym F10 [class="XCalc"] scratchpad show
 bindsym F12 [class="Xfce4-notes"] scratchpad show
