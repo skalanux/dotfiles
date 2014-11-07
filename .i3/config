@@ -175,7 +175,7 @@ bar {
         }
 }
 
-exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer;urxvtc -name urxvt_zsh
+exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id gnome-settings-daemon
@@ -184,14 +184,16 @@ exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
-exec --no-startup-id udiskie
+exec --no-startup-id xcalc
+# Comment udiskie because is causing problems with docker
+#exec --no-startup-id udiskie
 
 exec --no-startup-id feh --bg-scale ~/Imágenes/fondo-actual.jpg
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
-for_window [instance="urxvt_mc"] move to scratchpad border 1pixel
-for_window [instance="urxvt_zsh"] move to scratchpad border 1pixel
+for_window [class="XCalc"] move to scratchpad border 1pixel
+for_window [class="Xfce4-notes"] move to scratchpad border 1pixel
 for_window [instance="synapse"] border none
 
 exec --no-startup-id urxvtc -name urxvt_python -e ipython
@@ -201,10 +203,12 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 bindsym $mod+i [instance="urxvt_python"] scratchpad show
-bindsym $mod+Shift+v [instance="master_volume"] scratchpad show
-bindsym F12 [instance="urxvt_zsh"] scratchpad show
+bindsym F9 [instance="master_volume"] scratchpad show
+bindsym F10 [class="XCalc"] scratchpad show
+bindsym F12 [class="Xfce4-notes"] scratchpad show
 
 # xfce4-notify
+for_window [class="Xfce4-notes"] floating enable;border none; focus mode_toggle
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 bindsym $mod+l exec ~/.i3/lockpanta
 #bindsym $mod+less exec ~/.i3/reset_readmessages.py
