@@ -40,6 +40,15 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+# Move workspace to different monitor
+bindsym $mod+Mod1+Left move workspace to output left
+bindsym $mod+Mod1+Right move workspace to output right
+
+# Switch workspaces
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Right workspace next
+bindsym $mod+space workspace back_and_forth
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -64,7 +73,7 @@ bindsym $mod+e layout default
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Mod1+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -73,11 +82,11 @@ bindsym $mod+a focus parent
 bindcode $mod+c focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1 www
-bindsym $mod+2 workspace 2 code
-bindsym $mod+3 workspace 3 irc
-bindsym $mod+4 workspace 4 multimedia
-bindsym $mod+5 workspace 5 buffer
+bindsym $mod+1 workspace 1 im
+bindsym $mod+2 workspace 2 www
+bindsym $mod+3 workspace 3 code
+bindsym $mod+4 workspace 4 music & video
+bindsym $mod+5 workspace 5 temp
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -85,11 +94,11 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move workspace 1 www
-bindsym $mod+Shift+quotedbl move workspace 2 code
-bindsym $mod+Shift+periodcentered move workspace 3 irc
-bindsym $mod+Shift+dollar move workspace 4 multimedia
-bindsym $mod+Shift+percent move workspace 5 buffer
+bindsym $mod+Shift+exclam move workspace 1 im
+bindsym $mod+Shift+quotedbl move workspace 2 www
+bindsym $mod+Shift+periodcentered move workspace 3 code
+bindsym $mod+Shift+dollar move workspace 4 music & video
+bindsym $mod+Shift+percent move workspace 5 temp
 bindsym $mod+Shift+ampersand move workspace 6
 bindsym $mod+Shift+slash move workspace 7
 bindsym $mod+Shift+parenleft move workspace 8
@@ -194,5 +203,5 @@ bindsym F12 [instance="urxvt_zsh"] scratchpad show
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 bindsym $mod+l exec ~/.i3/lockpanta
-bindsym $mod+less exec ~/.i3/reset_readmessages.py
+#bindsym $mod+less exec ~/.i3/reset_readmessages.py
 bindsym Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
