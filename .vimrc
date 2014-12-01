@@ -326,7 +326,7 @@ let g:pymode_lint_signs = 0
 " don't fold python code on open
 let g:pymode_folding = 0
 " don't load rope by default. Change to 1 to use rope
-let g:pymode_rope = 0
+let g:pymode_rope = 1
 " open definitions on same window, and custom mappings for definitions and
 " occurrences
 let g:pymode_rope_goto_definition_bind = ',d'
@@ -442,4 +442,3 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-Plugin 'whatyouhide/vim-gotham'
