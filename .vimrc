@@ -324,7 +324,7 @@ let g:syntastic_enable_signs = 0
 let g:pymode_lint_on_write = 0
 let g:pymode_lint_signs = 0
 " don't fold python code on open
-let g:pymode_folding = 0
+let g:pymode_folding = 2
 " don't load rope by default. Change to 1 to use rope
 let g:pymode_rope = 1
 " open definitions on same window, and custom mappings for definitions and
