@@ -1,1 +1,1 @@
-xfce4-terminal -e "tmux attach" || xfce4-terminal -e "tmux new"
+xfce4-terminal -e ~/.i3/tmux_new_or_attach.sh
