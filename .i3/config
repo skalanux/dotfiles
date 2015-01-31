@@ -217,3 +217,8 @@ for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggl
 bindsym $mod+l exec ~/.i3/lockpanta
 #bindsym $mod+less exec ~/.i3/reset_readmessages.py
 bindsym Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
+
+# Key Volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 50%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
