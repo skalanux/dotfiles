@@ -21,6 +21,9 @@ font xft:Ubuntu,FontAwesome 10
 
 floating_modifier $mod
 
+# Enable auto back and forth
+workspace_auto_back_and_forth yes
+
 # workspace layout
 workspace_layout tabbed
 bindsym $mod+Return exec ~/.i3/tmux-reattacher.sh
@@ -48,6 +51,11 @@ bindsym $mod+Mod1+Right move workspace to output right
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 bindsym $mod+space workspace back_and_forth
+
+
+
+
+
 
 # Alt Tab behavior
 bindsym Mod1+Tab focus right
