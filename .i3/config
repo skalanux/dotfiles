@@ -50,7 +50,7 @@ bindsym $mod+Mod1+Right move workspace to output right
 # Switch workspaces
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
-bindsym $mod+space workspace back_and_forth
+#bindsym $mod+space workspace back_and_forth
 
 
 
