@@ -403,7 +403,7 @@ let g:choosewin_overlay_enable = 1
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 0
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'laederon'
 let g:airline#extensions#whitespace#enabled = 0
 
 " to use fancy symbols for airline, uncomment the following lines and use a
@@ -425,13 +425,13 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
+let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '⮃'
 let g:airline_symbols.branch = '⭠'
 let g:airline_symbols.readonly = '⭤'
 let g:airline_symbols.linenr = '⭡'
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 set colorcolumn=79
 set mouse=i
 
