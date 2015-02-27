@@ -8,3 +8,7 @@
 	insteadOf = git://github.com/
 [push]
 	default = simple
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --pretty=oneline  --all
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
