@@ -42,7 +42,7 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # Move workspace to different monitor
 bindsym $mod+Mod1+Left move workspace to output left
@@ -51,7 +51,7 @@ bindsym $mod+Mod1+Right move workspace to output right
 # Switch workspaces
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
-#bindsym $mod+space workspace back_and_forth
+bindsym $mod+space workspace back_and_forth
 
 # Alt Tab behavior
 bindsym Mod1+Tab focus right
@@ -193,6 +193,8 @@ exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
+#exec --no-startup-id /opt/google/chrome/google-chrome --app=https://trello.com/b/i5JvzdDB/inbox
+#exec --no-startup-id /opt/google/chrome/google-chrome --app=https://devecoop.slack.com/messages/importante/
 exec --no-startup-id xcalc
 # Comment udiskie because is causing problems with docker
 #exec --no-startup-id udiskie
@@ -204,7 +206,8 @@ for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
 for_window [class="Xfce4-notes"] move to scratchpad border 1pixel
 for_window [instance="synapse"] border none
-
+for_window [instance="trello.com__b_i5JvzdDB_inbox"] move to workspace 0 tasks
+for_window [instance="devecoop.slack.com__messages_importante"] move to workspace 1 slack
 exec --no-startup-id urxvtc -name urxvt_python -e ipython
 exec --no-startup-id urxvtc -name master_volume -e alsamixer
 
@@ -225,16 +228,20 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Scratchpad
 bindsym F12 [instance="master_volume"] scratchpad show
+bindsym F9  workspace 0 tasks;exec ~/.i3/webapps.sh trello
+bindsym F10  workspace 1 slack;exec ~/.i3/webapps.sh slack
 
-mode "launch (p)Python (v)Volume (n)Notes (c)Calc" {
+mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello" {
         # c, chrome
         bindsym p [instance="urxvt_python"] scratchpad show ; mode "default"
         bindsym v [instance="master_volume"] scratchpad show ; mode "default"
         bindsym n [class="Xfce4-notes"] scratchpad show; mode "default"
         bindsym c [class="XCalc"] scratchpad show; mode "default"
+        bindsym t  workspace 0 tasks;exec ~/.i3/webapps.sh trello; mode "default"
+        bindsym s  workspace 1 slack;exec ~/.i3/webapps.sh slack; mode "default"
 
         # go back to normal (if we don't launch something)
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc"
+bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello"
