@@ -120,7 +120,7 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id ~/.i3/i3exit lock, mode "default"
         bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 bar {
     position bottom
     status_command i3blocks
-    #font pango:Source Code Pro for Powerline 12px
+    font pango:Source Code Pro for Powerline 12px
     colors{
         background #242424
         focused_workspace #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
@@ -226,20 +226,32 @@ exec --no-startup-id urxvtc -name master_volume -e alsamixer
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-bindsym F7 [instance="urxvt_python"] scratchpad show
-bindsym F8 [instance="urxvt_zsh"] scratchpad show
-bindsym F9 [instance="master_volume"] scratchpad show
-bindsym F10 [class="XCalc"] scratchpad show
-bindsym F12 [class="Xfce4-notes"] scratchpad show
-
 # xfce4-notify
 for_window [class="Xfce4-notes"] floating enable;border none; focus mode_toggle
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 bindsym $mod+l exec ~/.i3/lockpanta
 #bindsym $mod+less exec ~/.i3/reset_readmessages.py
-bindsym Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
+#bindsym Control+Tab exec i3-input -F 'exec ~/.i3/i3-wrapper.sh "%s"' -P Atajo:\  -f xft:Noto Sans 24
 
 # Key Volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 4%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 50%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+
+
+# Scratchpad
+bindsym F12 [instance="master_volume"] scratchpad show
+
+mode "launch (p)Python (v)Volume (n)Notes (c)Calc" {
+        # c, chrome
+        bindsym p [instance="urxvt_python"] scratchpad show ; mode "default"
+        bindsym v [instance="master_volume"] scratchpad show ; mode "default"
+        bindsym n [class="Xfce4-notes"] scratchpad show; mode "default"
+        bindsym c [class="XCalc"] scratchpad show; mode "default"
+
+        # go back to normal (if we don't launch something)
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc"
+
