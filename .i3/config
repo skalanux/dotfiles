@@ -231,7 +231,6 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # Scratchpad
 bindsym F12 [instance="master_volume"] scratchpad show
 bindsym F8 [instance="cheater"] scratchpad show
-bindsym F8  workspace 0 tasks;exec ~/.i3/webapps.sh trello
 bindsym F9  workspace 0 tasks;exec ~/.i3/webapps.sh trello
 bindsym F10  workspace 1 slack;exec ~/.i3/webapps.sh slack
 
