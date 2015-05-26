@@ -1,0 +1,25 @@
+.container {
+    width: 30em;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+h1 {
+    position: relative;
+}
+
+h1 span {
+    position: absolute;
+    top: 24px;
+    left: 310px;
+}
+
+code {
+    border: 1px dotted #999;
+    background: #eee;
+    color: #333;
+}
+
+li {
+    margin: 0.5em 0;
+}

@@ -192,6 +192,7 @@ exec --no-startup-id ~/.i3/conkyblocks
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
+exec --no-startup-id cheater
 exec --no-startup-id setxkbmap es -option terminate:ctrl_alt_bksp -option ctrl:nocaps
 #exec --no-startup-id /opt/google/chrome/google-chrome --app=https://trello.com/b/i5JvzdDB/inbox
 #exec --no-startup-id /opt/google/chrome/google-chrome --app=https://devecoop.slack.com/messages/importante/
@@ -202,6 +203,7 @@ exec --no-startup-id xcalc
 exec --no-startup-id feh --bg-scale ~/Dropbox/Common/wallpaper.jpg
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
+for_window [instance="cheater"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
 for_window [class="Xfce4-notes"] move to scratchpad border 1pixel
@@ -228,6 +230,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Scratchpad
 bindsym F12 [instance="master_volume"] scratchpad show
+bindsym F8 [instance="cheater"] scratchpad show
+bindsym F8  workspace 0 tasks;exec ~/.i3/webapps.sh trello
 bindsym F9  workspace 0 tasks;exec ~/.i3/webapps.sh trello
 bindsym F10  workspace 1 slack;exec ~/.i3/webapps.sh slack
 
