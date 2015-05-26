@@ -1,6 +1,0 @@
-[submodule ".i3/everpad-note-launch"]
-	path = .i3/everpad-note-launch
-	url = https://github.com/skalanux/everpad-note-launch
-[submodule ".zprezto"]
-	path = .zprezto
-	url = https://github.com/skalanux/prezto
