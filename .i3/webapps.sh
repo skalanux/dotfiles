@@ -57,6 +57,9 @@ start ()
         (trello)
         focus instance trello.com__b_i5JvzdDB_inbox  /opt/google/chrome/google-chrome --app=https://trello.com/b/i5JvzdDB/inbox
         ;;
+        (evernote)
+        focus instance www.evernote.com__Home.action  /opt/google/chrome/google-chrome --app=https://www.evernote.com/Home.action
+        ;;
 
     esac
 }
