@@ -168,18 +168,30 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+## Start i3bar to display a workspace bar (plus the system information i3status
+## finds out, if available)
+#bar {
+#    position bottom
+#    status_command i3blocks
+#    font pango:Source Code Pro for Powerline 12px
+#    colors{
+#        background #242424
+#        focused_workspace #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
+#        inactive_workspace #073642 #073642 #eee8d5 #6c71c4
+#        statusline #d64937
+#        }
+#}
+## Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    position bottom
-    status_command i3blocks
-    font pango:Source Code Pro for Powerline 12px
-    colors{
-        background #242424
-        focused_workspace #0D5a7a #0D5a7a #fdf6e3 #0D5a7a
-        inactive_workspace #073642 #073642 #eee8d5 #6c71c4
-        statusline #d64937
-        }
+        status_command i3status
+        status_command $HOME/.i3/conkyi3
+        colors {
+            background #242424
+            focused_workspace #0D5a7a #0d5a7a #fdf6e3 #0D5a7a
+            inactive_workspace #073642 #073642 #eee8d5 #6c71c4
+     }
+           font xft: Ubuntu,FontAwesome 13px
 }
 
 exec urxvtd -q -o -f;urxvtc -name urxvt_python -e ipython;urxvtc -name master_volume -e alsamixer
@@ -188,7 +200,7 @@ exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton
 exec --no-startup-id xfce4-notes
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id ~/.i3/conkyblocks
+#exec --no-startup-id ~/.i3/conkyblocks
 exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
@@ -242,7 +254,7 @@ mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (e)Evernote
         bindsym c [class="XCalc"] scratchpad show; mode "default"
         bindsym t  workspace 0 tasks;exec ~/.i3/webapps.sh trello; mode "default"
         bindsym s  workspace 1 slack;exec ~/.i3/webapps.sh slack; mode "default"
-        bindsym e  workspace 1 evernote;exec ~/.i3/webapps.sh evernote; mode "default"
+        bindsym e  workspace 0 tasks;exec ~/.i3/webapps.sh evernote; mode "default"
 
         # go back to normal (if we don't launch something)
         bindsym Return mode "default"
