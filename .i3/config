@@ -218,7 +218,7 @@ for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="cheater"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
-for_window [class="Xfce4-notes"] move to scratchpad border 1pixel
+for_window [title="Google Keep"] move to scratchpad border 1pixel
 for_window [instance="synapse"] border none
 for_window [instance="trello.com__b_i5JvzdDB_inbox"] move to workspace 0 tasks
 for_window [instance="devecoop.slack.com__messages_importante"] move to workspace 1 slack
@@ -250,11 +250,11 @@ mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (e)Evernote
         # c, chrome
         bindsym p [instance="urxvt_python"] scratchpad show ; mode "default"
         bindsym v [instance="master_volume"] scratchpad show ; mode "default"
-        bindsym n [class="Xfce4-notes"] scratchpad show; mode "default"
+        #bindsym n [class="Xfce4-notes"] scratchpad show; mode "default"
         bindsym c [class="XCalc"] scratchpad show; mode "default"
+        bindsym n  exec ~/.i3/webapps.sh keep; mode "default"
         bindsym t  workspace 0 tasks;exec ~/.i3/webapps.sh trello; mode "default"
         bindsym s  workspace 1 slack;exec ~/.i3/webapps.sh slack; mode "default"
-        bindsym e  workspace 0 tasks;exec ~/.i3/webapps.sh evernote; mode "default"
 
         # go back to normal (if we don't launch something)
         bindsym Return mode "default"
