@@ -246,7 +246,7 @@ bindsym F8 [instance="cheater"] scratchpad show
 bindsym F9  workspace 0 tasks;exec ~/.i3/webapps.sh trello
 bindsym F10  workspace 1 slack;exec ~/.i3/webapps.sh slack
 
-mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (e)Evernote" {
+mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
         # c, chrome
         bindsym p [instance="urxvt_python"] scratchpad show ; mode "default"
         bindsym v [instance="master_volume"] scratchpad show ; mode "default"
@@ -255,9 +255,10 @@ mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (e)Evernote
         bindsym n  exec ~/.i3/webapps.sh keep; mode "default"
         bindsym t  workspace 0 tasks;exec ~/.i3/webapps.sh trello; mode "default"
         bindsym s  workspace 1 slack;exec ~/.i3/webapps.sh slack; mode "default"
+        bindsym d  exec ~/.i3/webapps.sh drive; mode "default"
 
         # go back to normal (if we don't launch something)
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (e)Evernote"
+bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive"
