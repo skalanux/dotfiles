@@ -433,7 +433,8 @@ let g:airline_symbols.linenr = '⭡'
 
 "let g:Powerline_symbols = 'fancy'
 set colorcolumn=79
-set mouse=i
+"set mouse=i
+set mouse=a
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/

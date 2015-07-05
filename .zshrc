@@ -52,15 +52,15 @@ alias em="printf \\033]0\;\%s\\007 'emacs';emacsclient -t"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-#source $ZSH/oh-my-zsh.sh
-#plugins=(git, git-prompt, virtualenv, virtualenvwrapper, python)
+source $ZSH/oh-my-zsh.sh
+plugins=(git, git-prompt, virtualenv, virtualenvwrapper, python)
 
 
 # User configuration
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+#if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+#source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+#fi
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -122,3 +122,4 @@ esac
 #source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 #fi
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
