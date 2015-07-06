@@ -212,7 +212,7 @@ exec --no-startup-id xcalc
 # Comment udiskie because is causing problems with docker
 #exec --no-startup-id udiskie
 
-exec --no-startup-id feh --bg-scale ~/Dropbox/Common/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/Dropbox/Common/wallpaper.png
 
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="cheater"] move to scratchpad, border 1pixel
