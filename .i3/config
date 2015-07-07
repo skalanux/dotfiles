@@ -90,30 +90,30 @@ bindsym $mod+a focus parent
 bindcode $mod+c focus child
 
 # switch to workspace
-bindcode $mod+49 workspace 
-bindsym $mod+1 workspace ① 
-bindsym $mod+2 workspace ② 
-bindcode $mod+12 workspace ③ 
-bindsym $mod+4 workspace ④ 
-bindsym $mod+5 workspace 5 temp
+bindcode $mod+49 workspace 0 
+bindsym $mod+1 workspace 1 
+bindsym $mod+2 workspace 2 
+bindcode $mod+12 workspace 3 
+bindsym $mod+4 workspace 4 
+bindsym $mod+5 workspace 5 
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 
+bindsym $mod+0 workspace 0 
 
 # move focused container to workspace
-bindcode $mod+Shift+49 move workspace ; workspace 
-bindsym $mod+Shift+exclam move workspace ① ; workspace ① 
-bindsym $mod+Shift+quotedbl move workspace ② ; workspace ② 
-bindcode $mod+Shift+12 move workspace ③ ; workspace ③ 
-bindsym $mod+Shift+dollar move workspace ④ i; workspace ④ 
-bindsym $mod+Shift+percent move workspace 5 temp; workspace 5 temp;
+bindcode $mod+Shift+49 move workspace 0 ; workspace 0 
+bindsym $mod+Shift+exclam move workspace 1 ; workspace 1 
+bindsym $mod+Shift+quotedbl move workspace 2 ; workspace 2 
+bindcode $mod+Shift+12 move workspace 3 ; workspace 3 
+bindsym $mod+Shift+dollar move workspace 4 i; workspace 4 
+bindsym $mod+Shift+percent move workspace 5 ; workspace 5 ;
 bindsym $mod+Shift+ampersand move workspace 6; workspace 6
 bindsym $mod+Shift+slash move workspace 7; workspace 7
 bindsym $mod+Shift+parenleft move workspace 8; workspace 8
 bindsym $mod+Shift+parenright move workspace 9; workspace 9
-bindsym $mod+Shift+equal move workspace ; workspace 
+bindsym $mod+Shift+equal move workspace 0 ; workspace 0 
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -205,8 +205,8 @@ for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
 for_window [title="Google Keep"] move to scratchpad border 1pixel
 for_window [instance="synapse"] border none
-for_window [instance="trello.com__b_i5JvzdDB_inbox"] move to workspace 
-for_window [instance="devecoop.slack.com__messages_importante"] move to workspace ① 
+for_window [instance="trello.com__b_i5JvzdDB_inbox"] move to workspace 0 
+for_window [instance="devecoop.slack.com__messages_importante"] move to workspace 1 
 exec --no-startup-id urxvtc -name urxvt_python -e ipython
 exec --no-startup-id urxvtc -name master_volume -e alsamixer
 
@@ -228,8 +228,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # Scratchpad
 bindsym F12 [instance="master_volume"] scratchpad show
 bindsym F8 [instance="cheater"] scratchpad show
-bindsym F9  workspace ;exec ~/.i3/webapps.sh trello
-bindsym F10  workspace ① ;exec ~/.i3/webapps.sh slack
+bindsym F9  workspace 0 ;exec ~/.i3/webapps.sh trello
+bindsym F10  workspace 1 ;exec ~/.i3/webapps.sh slack
 
 mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
         # c, chrome
@@ -238,8 +238,8 @@ mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
         #bindsym n [class="Xfce4-notes"] scratchpad show; mode "default"
         bindsym c [class="XCalc"] scratchpad show; mode "default"
         bindsym n  exec ~/.i3/webapps.sh keep; mode "default"
-        bindsym t  workspace ;exec ~/.i3/webapps.sh trello; mode "default"
-        bindsym s  workspace ① ;exec ~/.i3/webapps.sh slack; mode "default"
+        bindsym t  workspace 0 ;exec ~/.i3/webapps.sh trello; mode "default"
+        bindsym s  workspace 1 ;exec ~/.i3/webapps.sh slack; mode "default"
         bindsym d  exec ~/.i3/webapps.sh drive; mode "default"
 
         # go back to normal (if we don't launch something)
