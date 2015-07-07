@@ -4,7 +4,7 @@
 
 " no vi-compatible
 set nocompatible
-
+set shell=bash
 " Setting up Vundle - the vim plugin bundler
 let iCanHazVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
