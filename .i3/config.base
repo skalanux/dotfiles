@@ -51,8 +51,8 @@ bindsym $mod+Control+Right workspace next
 bindsym $mod+space workspace back_and_forth
 
 # Alt Tab behavior
-bindsym Mod1+Tab focus right
-bindsym Mod1+Shift+Tab focus left
+#bindsym Mod1+Tab focus right
+#bindsym Mod1+Shift+Tab focus left
 
 # Move container around
 bindsym $mod+Shift+Left move left
@@ -179,7 +179,7 @@ exec --no-startup-id compton
 #exec --no-startup-id xfce4-notes
 exec --no-startup-id gnome-settings-daemon
 #exec --no-startup-id ~/.i3/conkyblocks
-exec --no-startup-id synapse -s
+#exec --no-startup-id synapse -s
 exec --no-startup-id nm-applet
 exec --no-startup-id nice -n 10 dropbox start
 exec --no-startup-id cheater
@@ -192,12 +192,16 @@ exec --no-startup-id xcalc
 
 exec --no-startup-id feh --bg-scale ~/Dropbox/Common/wallpaper.png
 
+exec_always --no-startup-id rofi -key-ssh F1 -font "Ubuntu 10" -fg "#505050" -bg "#000000" -hlfg "#859900" -hlbg "#000000" -o 85
+exec_always --no-startup-id rofi -key-run ALT+F2 -font "Ubuntu 10" -fg "#505050" -bg "#000000" -hlfg "#859900" -hlbg "#000000" -o 85
+exec_always --no-startup-id rofi -key-window ALT+Tab -font "Ubuntu 10" -fg "#505050" -bg "#000000" -hlfg "#859900" -hlbg "#000000" -o 85
+
 for_window [instance="urxvt_python"] move to scratchpad, border 1pixel
 for_window [instance="cheater"] move to scratchpad, border 1pixel
 for_window [instance="master_volume"] move to scratchpad border 1pixel
 for_window [class="XCalc"] move to scratchpad border 1pixel
 for_window [title="Google Keep"] move to scratchpad border 1pixel
-for_window [instance="synapse"] border none
+#for_window [instance="synapse"] border none
 for_window [instance="trello.com__b_i5JvzdDB_inbox"] move to workspace 0 
 for_window [instance="devecoop.slack.com__messages_importante"] move to workspace 1 
 exec --no-startup-id urxvtc -name urxvt_python -e ipython
