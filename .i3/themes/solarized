@@ -32,17 +32,6 @@ set $baseB2 #eee8d5
 set $baseB3 #fdf6e3
 set $custom #1c5766
 
-# solarized light
-#set $baseA3 #fdf6e3
-#set $baseA2 #eee8d5
-#set $baseA1 #93a1a1
-#set $baseA0 #839496
-#set $baseB0 #657b83
-#set $baseB1 #586e75
-#set $baseB2 #073642
-#set $baseB3 #002b36
-#set $custom #e1cab3
-#
 # $i3-background
 exec_always --no-startup-id xsetroot -solid '$baseA2'
 
@@ -50,6 +39,7 @@ exec_always --no-startup-id xsetroot -solid '$baseA2'
 # solarized (clean)
 ###################
 # clientclass 			border  backgr. text 	indicator
+client.focused  		$baseA2 $baseA2 $green $baseA1
 client.unfocused  		$baseA2 $baseA2 $baseB1 $baseA1
 client.urgent 	 		$orange $orange $baseB3 $red
 #client.urgent 	 		$yellow $yellow $baseB3 $orange
@@ -67,21 +57,11 @@ colors {
 	# solarized (clean)
 	###################
  	# workclass 			border  backgr. text
- 	#focused_workspace		$green  $green  $baseA3
- 	#active_workspace		$cyan   $cyan   $baseA2
- 	#inactive_workspace		$baseA2 $baseA2 $baseB1
- 	#urgent_workspace		$orange $orange $baseB3
+ 	focused_workspace		$green  $green  $baseA3
+ 	active_workspace		$cyan   $cyan   $baseA2
+ 	inactive_workspace		$baseA2 $baseA2 $baseB1
+ 	urgent_workspace		$orange $orange $baseB3
  	#urgent_workspace		$yellow $yellow $baseB3
-
-	#####################
-	# solarized (borders)
-	#####################
-	# workclass 			border backgr. text
-	focused_workspace 		$baseB0 $green  $baseA3
-	active_workspace 		$baseB0 $cyan   $baseA2
-	inactive_workspace 		$baseB0 $baseA2 $baseB1
-	#urgent_workspace 		$baseB0 $orange $baseB3
-	urgent_workspace 		$baseB0 $orange $baseB3
 
 	###############################
 	# disable cyan? (clean/borders)

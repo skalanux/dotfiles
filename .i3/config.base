@@ -32,7 +32,7 @@ bindsym $mod+n exec nautilus --no-desktop
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -sb "#859900"
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
