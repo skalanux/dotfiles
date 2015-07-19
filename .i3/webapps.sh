@@ -61,7 +61,7 @@ start ()
         focus title "Google Keep" /opt/google/chrome/chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki 
         ;;
         (drive)
-        focus instance drive.google.com__drive_my-drive /opt/google/chrome/chrome  --app=https://drive.google.com/drive/my-drive
+        focus title  "Google Drive" firefox -no-remote -P drive https://drive.google.com/drive/my-drive
         ;;
 
 
