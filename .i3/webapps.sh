@@ -55,7 +55,7 @@ start ()
         focus title Slack firefox -no-remote -P slack devecoop.slack.com
         ;;
         (trello)
-        focus title Trello firefox -no-remote -P slack https://trello.com/b/i5JvzdDB/inbox
+        focus title Trello firefox -no-remote -P trello https://trello.com/b/i5JvzdDB/inbox
         ;;
         (keep)
         focus title "Google Keep" /opt/google/chrome/chrome --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki 
