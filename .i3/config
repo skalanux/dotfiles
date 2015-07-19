@@ -17,7 +17,7 @@ client.urgent           #242424 #900000 #ffffff #900000
 
 set $mod Mod4
 
-font xft:Droid Sans,FontAwesome 9
+font xft:Droid Sans,FontAwesome 10
 
 floating_modifier $mod
 
