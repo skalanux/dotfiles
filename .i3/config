@@ -42,8 +42,8 @@ client.focused  		$baseA2 $baseA2 $green $baseA1
 client.unfocused  		$baseA2 $baseA2 $baseB1 $baseA1
 client.urgent 	 		$orange $orange $baseB3 $red
 #client.urgent 	 		$yellow $yellow $baseB3 $orange
-client.focused_inactive 	$custom $custom $baseB2 $violet
-client.focused_inactive 	$baseB0 $custom $baseB2 $violet
+client.focused_inactive 	$baseA2 $green $baseA2 $baseA1
+client.focused 	$baseA2 $green $baseA2 $baseA1
 
 
 set $mod Mod4
