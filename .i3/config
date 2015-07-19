@@ -21,6 +21,7 @@ set $cyan	#2aa198
 set $green	#859900
 
 # solarized dark
+set $baseA4 #1c1d1c
 set $baseA3 #002b36
 set $baseA2 #073642
 set $baseA1 #586e75
@@ -42,8 +43,8 @@ client.focused  		$baseA2 $baseA2 $green $baseA1
 client.unfocused  		$baseA2 $baseA2 $baseB1 $baseA1
 client.urgent 	 		$orange $orange $baseB3 $red
 #client.urgent 	 		$yellow $yellow $baseB3 $orange
-client.focused_inactive 	$baseA2 $green $baseA2 $baseA1
-client.focused 	$baseA2 $green $baseA2 $baseA1
+#client.focused_inactive 	$baseA2 $green $baseA2 $baseA1
+client.focused_inactive  		$baseA2 $baseA2 $green $baseA1
 
 
 set $mod Mod4
@@ -205,7 +206,7 @@ bar {
 colors {
  	# status
 	separator $blue
- 	background $baseA3
+ 	background $baseA4
 	statusline $baseB2
 
  	###################
