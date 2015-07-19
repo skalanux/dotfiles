@@ -52,7 +52,7 @@ start ()
 {
     case "$@" in
         (slack)
-        focus instance devecoop.slack.com__messages_importante  /opt/google/chrome/google-chrome --app=https://devecoop.slack.com/messages/importante/
+        focus title Slack firefox -no-remote -P slack
         ;;
         (trello)
         focus instance trello.com__b_i5JvzdDB_inbox  /opt/google/chrome/google-chrome --app=https://trello.com/b/i5JvzdDB/inbox
