@@ -100,7 +100,8 @@ Bundle 'matchit.zip'
 Bundle 'Wombat'
 " Yank history navigation
 Bundle 'YankRing.vim'
-
+" Vimux
+Bundle "benmills/vimux"
 " ============================================================================
 " Install plugins the first time vim runs
 
