@@ -44,7 +44,7 @@ client.unfocused  		$baseA2 $baseA1 $baseB1 $baseA1
 client.urgent 	 		$orange $orange $baseB3 $red
 #client.urgent 	 		$yellow $yellow $baseB3 $orange
 #client.focused_inactive 	$baseA2 $green $baseA2 $baseA1
-client.focused_inactive  		$baseA2 $baseA2 $green $baseA1
+client.focused_inactive  		$baseA1 $baseA1 $green $baseA1
 
 
 set $mod Mod4
@@ -284,7 +284,7 @@ bindsym F8 [instance="cheater"] scratchpad show
 bindsym F9  workspace 0 ;exec ~/.i3/webapps.sh trello
 bindsym F10  workspace 1 ;exec ~/.i3/webapps.sh slack
 
-mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
+mode "Launch: (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
         # c, chrome
         bindsym p [instance="urxvt_python"] scratchpad show ; mode "default"
         bindsym v [instance="master_volume"] scratchpad show ; mode "default"
@@ -299,4 +299,4 @@ mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-bindsym Control+Tab mode "launch (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive"
+bindsym Control+Tab mode "Launch: (p)Python (v)Volume (n)Notes (c)Calc (s)Slack (t)Trello (d)Drive"
